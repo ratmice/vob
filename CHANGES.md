@@ -1,3 +1,12 @@
+# vob 3.0.6 (2025-08-14)
+
+* Transparently optimise `iter_{set|unset}_bits(...).count()` to use platform
+  "count bits" directly, rather than forcing the full iterator to execute.
+  Depending on your machine, this can lead to savings of 2-3 orders of magnitude.
+
+* Implement `DoubleEndedIterator` and `FusedIterator` for `Iter{Set|Unset}Bits`.
+
+
 # vob 3.0.5 (2025-06-25)
 
 * Add `unchecked_get` and `unchecked_set`.
